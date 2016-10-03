@@ -67,6 +67,7 @@ public class InboxService extends IntentService {
         connectionSettings();
         String mailFrom;
         String mailDate;
+        String mailSubject;
         String mailContent;
         String messageNew;
 
@@ -123,7 +124,7 @@ public class InboxService extends IntentService {
                         SimpleDateFormat format = new SimpleDateFormat("MMM d");
                         mailDate = format.format(message.getReceivedDate());
 
-                        firstInboxMessageSubject = message.getSubject();
+                        mailSubject = message.getSubject();
 
                         // Search for main text content
                         mailContent = "";
@@ -145,7 +146,7 @@ public class InboxService extends IntentService {
                         HashMap<String, String> mailMap = new HashMap<String, String>();
                         mailMap.put("address", mailFrom);
                         mailMap.put("date", mailDate);
-                        mailMap.put("subject", firstInboxMessageSubject);
+                        mailMap.put("subject", mailSubject);
                         mailMap.put("content", mailContent);
                         mailMap.put("new", messageNew);
 
