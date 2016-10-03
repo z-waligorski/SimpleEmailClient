@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="App settings">
+
+        <ListPreference
+            android:title="Checking mailbox"
+            android:key="INTERVAL"
+            android:summary="Chose how often message list should be updated"
+            android:entries="@array/refresh_time"
+            android:entryValues="@array/refresh_time_values"
+            android:defaultValue="no_refreshing" />
+
+        <ListPreference
+            android:title="Emails loaded"
+            android:key="NUMBER_OF_EMAILS"
+            android:summary="Number of emails to load"
+            android:entries="@array/mails_to_load"
+            android:entryValues="@array/mails_to_load_values"
+            android:defaultValue="10"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Account" >
+
+        <EditTextPreference
+            android:title="Username"
+            android:key="USER_ADDRESS"
+            android:summary="Enter your username" />
+
+        <EditTextPreference
+            android:title="Password"
+            android:key="PASSWORD"
+            android:summary="Enter your password" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Connection settings" >
+
+        <EditTextPreference
+            android:title="smtpHost"
+            android:key="SMTPHOST"
+            android:summary="Look for: Outgoing mail server" />
+
+        <EditTextPreference
+            android:title="smtpPort"
+            android:key="SMTPPORT"
+            android:summary="Look for: Server port"/>
+
+        <EditTextPreference
+            android:title="imap"
+            android:key="IMAP"
+            android:summary="Incoming mail server" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

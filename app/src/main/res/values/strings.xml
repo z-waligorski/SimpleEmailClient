@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Simple Email Client</string>
+
+    <string name="menu_opened">Menu opened</string>
+    <string name="menu_closed">Menu closed</string>
+    <string name="information">Application was created using JavaMail API.\n
+        \nIt uses IMAP protocol for downloading emails and SMTP protocol for sending.\n
+        \nYou can find all settings required for app to work properly on your email provider\'s website.\n
+        \nApp\'s code is available on GitHub.
+    </string>
+
+</resources>
